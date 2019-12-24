@@ -7,6 +7,13 @@ This project is a test task for appfollow
 * Docker
 * Docker-compose
 
+## Installation
+
+1. Install docker and docker-compose
+2. Clone this repository
+3. Change secret_key, database user and password (optional) in .env.prod and .env.prod.db
+
+
 ## Running
 
     docker-compose.prod.yml up -d --build

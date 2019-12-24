@@ -142,8 +142,8 @@ MAX_PAGE_SIZE = 50
 
 HACKER_URL = 'https://news.ycombinator.com'
 
-CELERY_BROKER_URL = 'redis://redis:6379'
-BROKER_URL = 'redis://redis:6379'
+CELERY_BROKER_URL = os.environ.get('REDIS', 'redis://redis:6379')
+BROKER_URL = os.environ.get('REDIS', 'redis://redis:6379')
 
 CELERY_BEAT_SCHEDULE = {
     'fetch_posts-every-60-seconds': {
