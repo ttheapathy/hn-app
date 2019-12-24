@@ -40,3 +40,8 @@ multiple:
 
 manual fetch new posts:
 `curl -X GET http://localhost/posts/_fetch`
+
+## Live Demo
+
+Digital Ocean:
+`curl -X GET http://159.65.74.146/posts`

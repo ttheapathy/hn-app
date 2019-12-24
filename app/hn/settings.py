@@ -128,12 +128,19 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-BROWSABLE_API = 'rest_framework.renderers.BrowsableAPIRenderer' if DEBUG else ''
+DEFAULT_RENDERER_CLASSES = (
+    'rest_framework.renderers.JSONRenderer',
+)
+
+if DEBUG:
+    DEFAULT_RENDERER_CLASSES = DEFAULT_RENDERER_CLASSES + (
+        'rest_framework.renderers.BrowsableAPIRenderer',
+    )
 
 REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',),
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
-    'DEFAULT_RENDERER_CLASSES': ('rest_framework.renderers.JSONRenderer', BROWSABLE_API),
+    'DEFAULT_RENDERER_CLASSES': DEFAULT_RENDERER_CLASSES,
     'ORDERING_PARAM': 'order',
     'PAGE_SIZE': 5,
 }
