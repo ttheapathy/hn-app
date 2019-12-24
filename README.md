@@ -4,8 +4,8 @@ This project is a test task for appfollow
 
 ## Requirements
 
-* Docker
-* Docker-compose
+* Docker>=19.03.5
+* Docker-compose>=1.24.1
 
 ## Installation
 
@@ -16,7 +16,7 @@ This project is a test task for appfollow
 
 ## Running
 
-    docker-compose.prod.yml up -d --build
+    docker-compose -f docker-compose.prod.yml up -d --build
 
 ## Usage
 
