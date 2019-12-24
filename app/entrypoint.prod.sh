@@ -15,7 +15,7 @@ if [ "$1" == "run" ]; then
     python manage.py migrate
     python manage.py collectstatic --no-input --clear
     python manage.py test
-    gunicorn hn.wsgi:application --bind 0.0.0.0:8000
+    gunicorn hn.wsgi:application --bind 127.0.0.1:8000
 fi
 
 exec "$@"
