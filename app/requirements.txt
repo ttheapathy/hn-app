@@ -8,7 +8,7 @@ chardet==3.0.4
 coverage==5.0.1
 Django==3.0.1
 django-filter==2.2.0
-djangorestframework==3.11.0
+djangorestframework==3.11.2
 entrypoints==0.3
 flake8==3.7.9
 gunicorn==20.0.4
